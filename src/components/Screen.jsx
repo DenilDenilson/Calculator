@@ -1,6 +1,6 @@
 export default function Sreen() {
   return (
-    <div>
+    <div className="text-White">
       Valores
     </div>
   )

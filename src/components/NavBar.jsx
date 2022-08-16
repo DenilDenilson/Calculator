@@ -2,8 +2,8 @@ import Theme from "./Theme"
 
 export default function NavBar({ marca }) {
   return (
-    <nav>
-      <div>{marca}</div>
+    <nav className="flex justify-between">
+      <div className="text-White">{marca}</div>
       <Theme>
 
       </Theme>

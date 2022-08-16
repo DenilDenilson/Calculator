@@ -27,7 +27,7 @@ module.exports = {
       // Text
     
       'Very_dark_grayish_blue': 'hsl(221, 14%, 31%)',
-      'White': 'hsl(0, 0, 100%)',
+      'White': '#FFFFFF',
     },
   },
   plugins: [],

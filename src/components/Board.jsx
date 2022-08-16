@@ -1,8 +1,9 @@
 import Button from "./Button";
+import './Board.css'
 
 export default function Board() {
   return (
-    <section>
+    <section className="grid grid-cols-4 gap-2 grid-rows-5 p-2">
       <Button value='7'></Button>
       <Button value='8'></Button>
       <Button value='9'></Button>

@@ -5,11 +5,13 @@ import Screen from './components/Screen';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App w-screen h-screen bg-VDDB_main_background p-4">
       {/* Barra superior */}
-      <NavBar marca='calc'></NavBar>
-      <Screen></Screen>
-      <Board></Board>
+      <section className="">
+        <NavBar marca='calc'></NavBar>
+        <Screen></Screen>
+        <Board></Board>
+      </section>
     </div>
   );
 }
