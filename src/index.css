@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
 * {
   outline: black solid 2px;
 }
@@ -22,3 +25,19 @@ code {
 
 
 /* Estilos personalizados que no pude agregar con tailwind */
+
+.buttons {
+  box-shadow: inset 0px -12px 0px -7px hsl(28, 16%, 65%);
+}
+
+.button-del, .button-reset{
+  box-shadow: inset 0px -12px 0px -7px hsl(224, 28%, 35%);
+}
+
+.button-equal {
+  box-shadow: inset 0px -12px 0px -7px hsl(6, 70%, 34%);
+}
+/* 
+.button-reset {
+  box-shadow: inset 0px -12px 0px -7px #848484;
+} */

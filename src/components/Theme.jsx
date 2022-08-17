@@ -1,10 +1,10 @@
 export default function Theme() {
   return (
     <section className="flex">
-      <div className="text-White">Theme</div>
+      <div className="text-White font-sans uppercase">Theme</div>
       <div className="flex">
         <div className="flex flex-col">
-          <label htmlFor="input-rad-1" className="text-White">1</label>
+          <label htmlFor="input-rad-1" className="text-White font-sans">1</label>
           <input 
             type='radio'
             name='style-btn'
@@ -13,7 +13,7 @@ export default function Theme() {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="input-rad-2" className="text-White">2</label>
+          <label htmlFor="input-rad-2" className="text-White font-sans">2</label>
           <input 
             type='radio'
             name='style-btn'
@@ -22,7 +22,7 @@ export default function Theme() {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="input-rad-3" className="text-White">3</label>
+          <label htmlFor="input-rad-3" className="text-White font-sans">3</label>
           <input 
             type='radio'
             name='style-btn'

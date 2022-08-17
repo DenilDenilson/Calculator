@@ -5,9 +5,9 @@ import Screen from './components/Screen';
 
 function App() {
   return (
-    <div className="App w-screen h-screen bg-VDDB_main_background p-4">
+    <div className="App w-screen h-screen bg-VDDB_main_background grid place-content-center">
       {/* Barra superior */}
-      <section className="">
+      <section className="w-80 h-[36rem]">
         <NavBar marca='calc'></NavBar>
         <Screen></Screen>
         <Board></Board>
