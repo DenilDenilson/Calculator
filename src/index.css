@@ -37,7 +37,19 @@ code {
 .button-equal {
   box-shadow: inset 0px -12px 0px -7px hsl(6, 70%, 34%);
 }
-/* 
-.button-reset {
-  box-shadow: inset 0px -12px 0px -7px #848484;
-} */
+
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: hsl(6, 70%, 34%);
+}
+
+.input-range::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: hsl(6, 70%, 34%);
+}
