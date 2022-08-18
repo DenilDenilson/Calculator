@@ -1,7 +1,7 @@
 export default function Theme() {
   return (
-    <section className="flex">
-      <div className="text-White font-sans uppercase">Theme</div>
+    <section className="flex items-end gap-2">
+      <div className="text-White font-sans uppercase text-xs">Theme</div>
       <div className="flex">
         <div className="flex flex-col">
           <label htmlFor="input-rad-1" className="text-White font-sans">1</label>

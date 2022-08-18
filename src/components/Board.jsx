@@ -3,7 +3,7 @@ import './Board.css'
 
 export default function Board() {
   return (
-    <section className="grid grid-cols-4 gap-2 grid-rows-5 p-2 bg-White">
+    <section className="grid grid-cols-4 gap-3 grid-rows-5 p-5 bg-VDDB_toggle_keypad_background rounded-lg">
       <Button value='7'></Button>
       <Button value='8'></Button>
       <Button value='9'></Button>
