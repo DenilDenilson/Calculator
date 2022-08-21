@@ -1,4 +1,4 @@
-export default function Button({ value }) {
+export default function Button(props) {
   let clase = 'font-sans py-3 bg-Light_grayish_orange_key_background rounded-md'
   // if (value == 'RESET' || value == '=') {
   //   clase = 'text-White col-span-2 font-sans text-[32px] py-3 '
@@ -6,13 +6,13 @@ export default function Button({ value }) {
   // else {
   //   clase = 'text-White font-sans text-[32px] py-3 bg-Light_grayish_orange_key_background'
   // }
-  if (value == 'RESET') {
+  if (props.value == 'RESET') {
     clase = clase + ' text-xl text-White col-span-2 bg-DDB_key_background button-reset'
   }
-  else if (value == '=') {
+  else if (props.value == '=') {
     clase = clase + ' text-xl text-White col-span-2 bg-Red_key_background_toggle button-equal'
   }
-  else if (value == 'DEL') {
+  else if (props.value == 'DEL') {
     clase = clase + ' text-xl text-White bg-DDB_key_background button-del'
   }
   else {
@@ -21,8 +21,8 @@ export default function Button({ value }) {
 
   return (
     <button className={clase} 
-    value={value}>
-      {value}
+    value={props.value}>
+      {props.value}
     </button>
   )
 }
