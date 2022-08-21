@@ -20,8 +20,11 @@ export default function Button(props) {
   }
 
   return (
-    <button className={clase} 
-    value={props.value}>
+    <button 
+    className={clase} 
+    value={props.value}
+    onClick = {props.onTextChange}
+    >
       {props.value}
     </button>
   )
