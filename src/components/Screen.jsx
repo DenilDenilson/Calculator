@@ -13,7 +13,13 @@ export default function Sreen({ number1, number2, op, equal, aux }) {
   //   number_val = number2
   // }
   if (equal == '=') {
-    number_val = evaluate(number1+op+number2)
+    // if((number1+op+number2).includes('RESET')) {
+    //   op = ''
+    //   equal = ''
+    //   alert('Operación inválida')
+    // }
+    //else 
+    {number_val = evaluate(number1+op+number2)}
   }
 
   return (

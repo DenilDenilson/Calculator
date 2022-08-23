@@ -15,35 +15,9 @@ export default function Theme() {
           min={1}
           max={3}
           step={1}
+          //value={1}
           className="appearance-none p-[3px] rounded-xl bg-VDDB_toggle_keypad_background focus:bg-Red_key_background_toggle input-range"
         />
-        {/* <div className="flex flex-col">
-          <label htmlFor="input-rad-1" className="text-White font-sans">1</label>
-          <input 
-            type='radio'
-            name='style-btn'
-            value='1'
-            id="input-rad-1"
-          />
-        </div>
-        <div className="flex flex-col">
-          <label htmlFor="input-rad-2" className="text-White font-sans">2</label>
-          <input 
-            type='radio'
-            name='style-btn'
-            value='2'
-            id="input-rad-2"
-          />
-        </div>
-        <div className="flex flex-col">
-          <label htmlFor="input-rad-3" className="text-White font-sans">3</label>
-          <input 
-            type='radio'
-            name='style-btn'
-            value='3'
-            id="input-rad-3"
-          />
-        </div> */}
       </div>
     </section>
   )
