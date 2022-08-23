@@ -5,6 +5,8 @@ import DogGuardian from './components/DogGuardian';
 import NavBar from './components/NavBar';
 import Screen from './components/Screen';
 
+const classNameApppre = "App w-screen h-screen bg-VDDB_main_background grid place-content-center"
+
 function App() {
   const values = ['7', '8', '9', 'DEL', '4', '5', '6', '+', '1', '2', '3', '-', '.', '0', '/', '*', 'RESET', '=']
   const [val, setVal] = useState('0')
@@ -12,6 +14,7 @@ function App() {
   const [op, setOp] = useState('')
   const [equal, setEqual] = useState('')
   const [aux, setAux] = useState(0)
+  const [classNameApp, setClassNameApp] = useState(classNameApppre)
 
   const onTextChange3v2 = e => {
     if (e.target.value == 'RESET') {
@@ -42,16 +45,35 @@ function App() {
     }
   }
 
+  const themeChange3 = e => {
+    console.log(e.target.value)
+    if (e.target.value == 3) {
+      setClassNameApp("App w-screen h-screen bg-VDDB_main_background grid place-content-center")
+      // classNameApp = "App w-screen h-screen bg-VDDB_main_background grid place-content-center"
+    }
+    else if (e.target.value == 2) {
+      setClassNameApp("light App w-screen h-screen bg-VDDB_main_background grid place-content-center")
+      // classNameApp = "light App w-screen h-screen bg-VDDB_main_background grid place-content-center"
+    }
+    else if (e.target.value == 1) {
+      setClassNameApp("neon App w-screen h-screen bg-VDDB_main_background grid place-content-center")
+      // classNameApp = "neon App w-screen h-screen bg-VDDB_main_background grid place-content-center"
+    }
+  }
+
   return (
     <div className=''>
-    <div className="neon App w-screen h-screen bg-VDDB_main_background grid place-content-center">
+    <div className={classNameApp}>
       {/* Barra superior */}
       {/* <p>{val}</p> */}
       {/* <p>{val2}</p> */}
       {/* <p>{op}</p> */}
       {/* <p>{equal}</p> */}
       <section className="w-[21rem] h-[36rem]">
-        <NavBar marca='calc'></NavBar>
+        <NavBar 
+          marca='calc'
+          themeChange2={themeChange3}
+          ></NavBar>
         {/* <DogGuardian className="w-[21rem] h-[36rem]"> */}
         <Screen number1={val} 
           number2={val2} 

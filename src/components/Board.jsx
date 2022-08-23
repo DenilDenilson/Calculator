@@ -1,5 +1,4 @@
 import Button from "./Button";
-import './Board.css'
 import { useState } from "react";
 
 export default function Board(props) {
