@@ -4,6 +4,81 @@
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
+@layer {
+  :root {
+    /* // Thema 1
+      // Backgrounds
+      // VDDB: Very_Dark_Desaturated_Blue */
+      --VDDB_main_background: hsl(222, 26%, 31%);
+      --VDDB_toggle_keypad_background: hsl(223, 31%, 20%);
+      --VDDB_screen_background: hsl(224, 36%, 15%);
+    
+      /* // Keys */
+      /* // DDB: Desaturated_Dark_Blue */
+      --DDB_key_background: hsl(225, 21%, 49%);
+      --DDB_key_shadow: hsl(224, 28%, 35%);
+    
+      --Red_key_background_toggle: hsl(6, 63%, 50%);
+      --Dark_red_key_shadow: hsl(6, 70%, 34%);
+    
+      --Light_grayish_orange_key_background: hsl(30, 25%, 89%);
+      --Grayish_orange_key_shadow: hsl(28, 16%, 65%);
+    
+      /* // Text */
+    
+      --Very_dark_grayish_blue: hsl(221, 14%, 31%);
+      --White: #FFFFFF;
+  }
+  .light {
+    /* // Thema 1
+      // Backgrounds
+      // VDDB: Very_Dark_Desaturated_Blue */
+      --VDDB_main_background: hsl(0, 0%, 90%);
+      --VDDB_toggle_keypad_background: hsl(0, 5%, 81%);
+      --VDDB_screen_background: hsl(0, 0%, 93%);
+    
+      /* // Keys */
+      /* // DDB: Desaturated_Dark_Blue */
+      --DDB_key_background: hsl(185, 42%, 37%);
+      --DDB_key_shadow: hsl(185, 58%, 25%);
+    
+      --Red_key_background_toggle: hsl(25, 98%, 40%);
+      --Dark_red_key_shadow: hsl(25, 99%, 27%);
+    
+      --Light_grayish_orange_key_background: hsl(45, 7%, 89%);
+      --Grayish_orange_key_shadow: hsl(35, 11%, 61%);
+    
+      /* // Text */
+    
+      --Very_dark_grayish_blue: hsl(60, 10%, 19%);
+      --White: hsl(0, 0, 100%);
+  }
+  .neon {
+    /* // Thema 1
+      // Backgrounds
+      // VDDB: Very_Dark_Desaturated_Blue */
+      --VDDB_main_background: hsl(268, 75%, 9%);
+      --VDDB_toggle_keypad_background: hsl(268, 71%, 12%);
+      --VDDB_screen_background: hsl(268, 71%, 12%);
+    
+      /* // Keys */
+      /* // DDB: Desaturated_Dark_Blue */
+      --DDB_key_background: hsl(281, 89%, 26%);
+      --DDB_key_shadow: hsl(285, 91%, 52%);
+    
+      --Red_key_background_toggle: hsl(176, 100%, 44%);
+      --Dark_red_key_shadow: hsl(177, 92%, 70%);
+    
+      --Light_grayish_orange_key_background: hsl(268, 47%, 21%);
+      --Grayish_orange_key_shadow: hsl(290, 70%, 36%);
+    
+      /* // Text */
+    
+      --Very_dark_grayish_blue: hsl(52, 100%, 62%);
+      /* - Very dark blue: hsl(198, 20%, 13%) */
+      --White: hsl(52, 100%, 62%);
+  }
+}
 
 /* * {
   outline: black solid 2px;
@@ -27,15 +102,15 @@ code {
 /* Estilos personalizados que no pude agregar con tailwind */
 
 .buttons {
-  box-shadow: inset 0px -12px 0px -7px hsl(28, 16%, 65%);
+  box-shadow: inset 0px -12px 0px -7px var(--Grayish_orange_key_shadow);
 }
 
 .button-del, .button-reset{
-  box-shadow: inset 0px -12px 0px -7px hsl(224, 28%, 35%);
+  box-shadow: inset 0px -12px 0px -7px var(--DDB_key_shadow);
 }
 
 .button-equal {
-  box-shadow: inset 0px -12px 0px -7px hsl(6, 70%, 34%);
+  box-shadow: inset 0px -12px 0px -7px var(--Dark_red_key_shadow);
 }
 
 .input-range::-webkit-slider-thumb {
@@ -43,7 +118,7 @@ code {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: hsl(6, 70%, 34%);
+  background-color: var(--Dark_red_key_shadow);
 }
 
 .input-range::-moz-range-thumb {
@@ -51,5 +126,5 @@ code {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: hsl(6, 70%, 34%);
+  background-color: var(--Dark_red_key_shadow);
 }

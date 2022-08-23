@@ -7,13 +7,13 @@ export default function Button(props) {
   //   clase = 'text-White font-sans text-[32px] py-3 bg-Light_grayish_orange_key_background'
   // }
   if (props.value == 'RESET') {
-    clase = clase + ' text-xl text-White col-span-2 bg-DDB_key_background button-reset'
+    clase = clase + ' text-xl text-[#fff] col-span-2 bg-DDB_key_background button-reset'
   }
   else if (props.value == '=') {
-    clase = clase + ' text-xl text-White col-span-2 bg-Red_key_background_toggle button-equal'
+    clase = clase + ' text-xl text-[#fff] col-span-2 bg-Red_key_background_toggle button-equal'
   }
   else if (props.value == 'DEL') {
-    clase = clase + ' text-xl text-White bg-DDB_key_background button-del'
+    clase = clase + ' text-xl text-[#fff] bg-DDB_key_background button-del'
   }
   else {
     clase = clase + ' text-Very_dark_grayish_blue buttons text-[32px]'

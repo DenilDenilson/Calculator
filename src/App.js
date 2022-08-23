@@ -43,12 +43,13 @@ function App() {
   }
 
   return (
-    <div className="App w-screen h-screen bg-VDDB_main_background grid place-content-center">
+    <div className=''>
+    <div className="neon App w-screen h-screen bg-VDDB_main_background grid place-content-center">
       {/* Barra superior */}
-      <p>{val}</p>
-      <p>{val2}</p>
-      <p>{op}</p>
-      <p>{equal}</p>
+      {/* <p>{val}</p> */}
+      {/* <p>{val2}</p> */}
+      {/* <p>{op}</p> */}
+      {/* <p>{equal}</p> */}
       <section className="w-[21rem] h-[36rem]">
         <NavBar marca='calc'></NavBar>
         {/* <DogGuardian className="w-[21rem] h-[36rem]"> */}
@@ -65,6 +66,7 @@ function App() {
         ></Board>
         {/* </DogGuardian> */}
       </section>
+    </div>
     </div>
   );
 }
