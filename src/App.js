@@ -5,7 +5,7 @@ import DogGuardian from './components/DogGuardian';
 import NavBar from './components/NavBar';
 import Screen from './components/Screen';
 
-const classNameApppre = "App w-screen h-screen bg-VDDB_main_background grid place-content-center"
+const classNameApppre = "App w-screen h-screen bg-VDDB_main_background grid place-content-center transition-all"
 
 function App() {
   const values = ['7', '8', '9', 'DEL', '4', '5', '6', '+', '1', '2', '3', '-', '.', '0', '/', '*', 'RESET', '=']
@@ -32,7 +32,7 @@ function App() {
       if (aux == 0) setVal(val.slice(0, -1))
       if (aux == 1) setVal2(val2.slice(0, -1))
     }
-    if (e.target.value == '+' || e.target.value == '-' || e.target.value == '*' || e.target.value == '/') {
+    if ((e.target.value == '+' || e.target.value == '-' || e.target.value == '*' || e.target.value == '/') && aux !=2) {
       // Cambiamos la variable auxiliar par saber con qué
       // número estamos trabajando
       setOp(e.target.value)
@@ -45,7 +45,7 @@ function App() {
       } 
       if (e.target.value != '.') {setVal(val + e.target.value)}
     }
-    if (aux == 1 && (!isNaN(e.target.value) || e.target.value == '.')) {
+    if ((aux == 1 && aux != 2) && (!isNaN(e.target.value) || e.target.value == '.')) {
       if(e.target.value == '.' && !val2.includes('.')) {
         setVal2(val2 + e.target.value)
       } 
@@ -77,11 +77,11 @@ function App() {
     <div className=''>
     <div className={classNameApp}>
       {/* Barra superior */}
-      <p>{val + op + val2}</p>
+      {/* <p>{val + op + val2}</p>
       <p>{val}</p>
       <p>{op}</p>
       <p>{val2}</p>
-      <p>{aux}</p>
+      <p>{aux}</p> */}
       {/* <p>{equal}</p> */}
       <section className="w-[21rem] h-[36rem]">
         <NavBar 

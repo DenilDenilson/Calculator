@@ -1,5 +1,5 @@
 export default function Button(props) {
-  let clase = 'font-sans py-3 bg-Light_grayish_orange_key_background rounded-md'
+  let clase = 'font-sans py-3 bg-Light_grayish_orange_key_background rounded-md hover:opacity-50'
   // if (value == 'RESET' || value == '=') {
   //   clase = 'text-White col-span-2 font-sans text-[32px] py-3 '
   // } 

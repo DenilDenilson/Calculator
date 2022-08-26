@@ -23,10 +23,10 @@ let operation = ''
     return (
       <p className="text-White bg-VDDB_screen_background h-[4.5rem] font-sans my-4 rounded-lg flex justify-between items-center text-3xl p-5">
         <div className="flex flex-col items-center h-16 opacity-50">
-          <p>{number1}</p>
+          <p>{left}</p>
           <p>{op}</p>
         </div>
-        <p>{number2}</p>
+        <p>{right}</p>
       </p>
     )
   }
