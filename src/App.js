@@ -5,7 +5,7 @@ import DogGuardian from './components/DogGuardian';
 import NavBar from './components/NavBar';
 import Screen from './components/Screen';
 
-const classNameApppre = "App w-screen h-screen bg-VDDB_main_background grid place-content-center transition-all"
+const classNameApppre = "App w-screen h-screen bg-VDDB_main_background grid place-content-center"
 
 function App() {
   const values = ['7', '8', '9', 'DEL', '4', '5', '6', '+', '1', '2', '3', '-', '.', '0', '/', '*', 'RESET', '=']

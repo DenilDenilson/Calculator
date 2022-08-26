@@ -15,7 +15,7 @@ let operation = ''
     operation = evaluate('0' + number1 + op + '0' + number2)
     return (
       <p className="text-White bg-VDDB_screen_background h-[4.5rem] font-sans my-4 rounded-lg flex justify-end items-center text-3xl p-5">
-        {operation}
+        { parseFloat(operation).toLocaleString('en-US')}
       </p>
     )
   }
@@ -23,10 +23,10 @@ let operation = ''
     return (
       <p className="text-White bg-VDDB_screen_background h-[4.5rem] font-sans my-4 rounded-lg flex justify-between items-center text-3xl p-5">
         <div className="flex flex-col items-center h-16 opacity-50">
-          <p>{left}</p>
+          <p>{ left == '' ? '' : parseFloat(left).toLocaleString('en-US') }</p>
           <p>{op}</p>
         </div>
-        <p>{right}</p>
+        <p>{ right == '' ? '' : parseFloat(right).toLocaleString('en-US') }</p>
       </p>
     )
   }
