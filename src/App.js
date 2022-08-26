@@ -9,39 +9,51 @@ const classNameApppre = "App w-screen h-screen bg-VDDB_main_background grid plac
 
 function App() {
   const values = ['7', '8', '9', 'DEL', '4', '5', '6', '+', '1', '2', '3', '-', '.', '0', '/', '*', 'RESET', '=']
-  const [val, setVal] = useState('0')
-  const [val2, setVal2] = useState('0')
+  const [val, setVal] = useState('')
+  const [val2, setVal2] = useState('')
   const [op, setOp] = useState('')
   const [equal, setEqual] = useState('')
   const [aux, setAux] = useState(0)
   const [classNameApp, setClassNameApp] = useState(classNameApppre)
-
+  const [auxDot, setAuxDot] = useState(0)
+  const ops = ['+-*/'] // Operaciones a usar en un condicional con includes
   const onTextChange3v2 = e => {
     if (e.target.value == 'RESET') {
-      setVal('0')
-      setVal2('0')
+      // REINICIAMOS TODOS LOS VALORES
+      setVal('')
       setOp('')
+      setVal2('')
+      setAux(0)
       setEqual('')
+      //setOp('')
     }
     if (e.target.value == 'DEL') {
-      if (aux == 1) {setVal(val.slice(0, -1))}
-      if (aux == 2) {setVal2(val2.slice(0, -1))}
+      // Borramos un numero
+      if (aux == 0) setVal(val.slice(0, -1))
+      if (aux == 1) setVal2(val2.slice(0, -1))
     }
-    if (!(isNaN(e.target.value)) || e.target.value=='.') {
-      if (op == '' || op == 'RESET') {
-        setAux(1)
+    if (e.target.value == '+' || e.target.value == '-' || e.target.value == '*' || e.target.value == '/') {
+      // Cambiamos la variable auxiliar par saber con qué
+      // número estamos trabajando
+      setOp(e.target.value)
+      setAux(1) 
+    }
+
+    if (aux == 0 && (!isNaN(e.target.value) || e.target.value == '.')) {
+      if(e.target.value == '.' && !val.includes('.')) {
         setVal(val + e.target.value)
-      }
-      else {
-        setAux(2)
-        setVal2(val2 + e.target.value)
-      }
+      } 
+      if (e.target.value != '.') {setVal(val + e.target.value)}
     }
-    else {
-      if (e.target.value != '=') {
-        if (e.target.value != 'DEL') setOp(e.target.value)
-      }
-      else setEqual('=')
+    if (aux == 1 && (!isNaN(e.target.value) || e.target.value == '.')) {
+      if(e.target.value == '.' && !val2.includes('.')) {
+        setVal2(val2 + e.target.value)
+      } 
+      if (e.target.value != '.') {setVal2(val2 + e.target.value)}
+    }
+    if (e.target.value == '=') {
+      setEqual('=')
+      setAux(2)
     }
   }
 
@@ -65,9 +77,11 @@ function App() {
     <div className=''>
     <div className={classNameApp}>
       {/* Barra superior */}
-      {/* <p>{val}</p> */}
-      {/* <p>{val2}</p> */}
-      {/* <p>{op}</p> */}
+      <p>{val + op + val2}</p>
+      <p>{val}</p>
+      <p>{op}</p>
+      <p>{val2}</p>
+      <p>{aux}</p>
       {/* <p>{equal}</p> */}
       <section className="w-[21rem] h-[36rem]">
         <NavBar 
@@ -94,3 +108,29 @@ function App() {
 }
 
 export default App;
+// if (e.target.value == 'RESET') {
+    //   setVal('0')
+    //   setVal2('0')
+    //   setOp('')
+    //   setEqual('')
+    // }
+    // if (e.target.value == 'DEL') {
+    //   if (aux == 1) {setVal(val.slice(0, -1))}
+    //   if (aux == 2) {setVal2(val2.slice(0, -1))}
+    // }
+    // if (!(isNaN(e.target.value)) || e.target.value=='.') {
+    //   if (op == '' || op == 'RESET') {
+    //     setAux(1)
+    //     setVal(val + e.target.value)
+    //   }
+    //   else {
+    //     setAux(2)
+    //     setVal2(val2 + e.target.value)
+    //   }
+    // }
+    // else {
+    //   if (e.target.value != '=') {
+    //     if (e.target.value != 'DEL') setOp(e.target.value)
+    //   }
+    //   else setEqual('=')
+    // }
