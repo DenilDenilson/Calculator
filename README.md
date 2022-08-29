@@ -14,11 +14,11 @@ A calculator made with react and tailwindcss with validations in frontend, that 
 - [Author](#author)
 
 # Overview
-###Theme 1
+### Theme 1
 ![](https://i.imgur.com/UYFlg3I.png)
-###Theme 2
+### Theme 2
 ![](https://i.imgur.com/WamUSbV.png)
-###Theme 3
+### Theme 3
 ![](https://i.imgur.com/7KwZV1Q.png)
 ### Links
 - Solution URL: [https://github.com/DenilDenilson/Calculator](https://github.com/DenilDenilson/Calculator "Repositorio")
