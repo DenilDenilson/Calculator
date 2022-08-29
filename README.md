@@ -4,8 +4,9 @@ A calculator made with react and tailwindcss with validations in frontend, that 
 # Table of content
 - [Table of content](#table-of-content)
 - [Overview](#overview)
-    - [Mobile](#mobile)
-    - [Desktop](#desktop)
+    - [Theme 1](#Theme 1)
+    - [Theme 2](# Theme 2)
+    - [Theme 3](# Theme 3)
     - [Links](#links)
 - [My process](#my-process)
     - [Build with](#build-with)
